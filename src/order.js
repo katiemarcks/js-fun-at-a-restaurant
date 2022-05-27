@@ -27,9 +27,13 @@ function listItems(orderTypeList) {
   return list;
 }
 
+function searchOrder(orderTypeList, orderItem) {
+  return orderTypeList.some((order) => order["item"] === orderItem);
+}
+
 module.exports = {
   takeOrder,
   refundOrder,
   listItems,
-  // searchOrder
+  searchOrder,
 };
