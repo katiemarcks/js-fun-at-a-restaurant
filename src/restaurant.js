@@ -9,8 +9,13 @@ function createRestaurant(name) {
   };
 }
 
+function addMenuItem(restaurant, menuItem) {
+  let mealType = menuItem["type"];
+  restaurant.menus[mealType].push(menuItem);
+}
+
 module.exports = {
   createRestaurant,
-  // addMenuItem,
+  addMenuItem,
   // removeMenuItem
 };
