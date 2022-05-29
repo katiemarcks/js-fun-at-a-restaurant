@@ -24,9 +24,12 @@ function removeMenuItem(restaurant, menuItem, mealType) {
     return element.name === menuItem.name;
   });
 
-  correctMenu.splice(index, 1);
-
-  return `No one is eating our ${menuItem} - it has been removed from the ${mealType} menu!`;
+  if (correctMenu.find((food) => food.name === menuItem)) {
+    correctMenu.splice(index, 1);
+    return `No one is eating our ${menuItem} - it has been removed from the ${mealType} menu!`;
+  } else {
+    return `Sorry, we don't sell ${menuItem}, try adding a new recipe!`;
+  }
 }
 
 module.exports = {
