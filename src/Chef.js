@@ -18,6 +18,8 @@ class Chef {
 
     if (correctMenu.find((food) => food.name === foodItem.name)) {
       return `Yes, we're serving ${foodItem.name} today!`;
+    } else {
+      return `Sorry, we aren't serving ${foodItem.name} today.`;
     }
   }
 }
