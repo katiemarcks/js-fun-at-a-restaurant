@@ -18,8 +18,19 @@ function addMenuItem(restaurant, menuItem) {
   }
 }
 
+function removeMenuItem(restaurant, menuItem, mealType) {
+  let correctMenu = restaurant.menus[mealType];
+  let index = correctMenu.findIndex((element) => {
+    return element.name === menuItem.name;
+  });
+
+  correctMenu.splice(index, 1);
+
+  return `No one is eating our ${menuItem} - it has been removed from the ${mealType} menu!`;
+}
+
 module.exports = {
   createRestaurant,
   addMenuItem,
-  // removeMenuItem
+  removeMenuItem,
 };

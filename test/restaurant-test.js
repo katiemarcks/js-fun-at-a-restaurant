@@ -141,11 +141,11 @@ describe("restaurant.js", function () {
   });
 
   describe("removeMenuItem", function () {
-    it.skip("should be a function", function () {
+    it("should be a function", function () {
       assert.isFunction(removeMenuItem);
     });
 
-    it.skip("should remove an item from the menu to update it", function () {
+    it("should remove an item from the menu to update it", function () {
       var pizzaRestaurant = createRestaurant("Sexy Pizza");
       var bbqPizza = {
         name: "BBQ Chicken Pizza",
@@ -186,7 +186,7 @@ describe("restaurant.js", function () {
       );
     });
 
-    it.skip("should remove a different item from the menu to update it", function () {
+    it("should remove a different item from the menu to update it", function () {
       var pizzaRestaurant = createRestaurant("Sexy Pizza");
       var bbqPizza = {
         name: "BBQ Chicken Pizza",
@@ -223,7 +223,7 @@ describe("restaurant.js", function () {
       );
     });
 
-    it.skip("should only remove a menu item if it is on the menu", function () {
+    it("should only remove a menu item if it is on the menu", function () {
       var arepaRestaurant = createRestaurant("Quiero Arepas");
       var error1 = removeMenuItem(arepaRestaurant, "Mom's Spaghetti", "lunch");
       var error2 = removeMenuItem(
