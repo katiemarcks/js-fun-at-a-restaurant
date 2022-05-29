@@ -114,7 +114,7 @@ describe("restaurant.js", function () {
       assert.equal(pizzaRestaurant.menus.breakfast[0], baconEggsPizza);
     });
 
-    it.skip("shouldn't add the same menu item more than once", function () {
+    it("shouldn't add the same menu item more than once", function () {
       var pizzaRestaurant = createRestaurant("Sexy Pizza");
       var bbqPizza = {
         name: "BBQ Chicken Pizza",

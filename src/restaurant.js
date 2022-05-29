@@ -11,7 +11,11 @@ function createRestaurant(name) {
 
 function addMenuItem(restaurant, menuItem) {
   let mealType = menuItem["type"];
-  restaurant.menus[mealType].push(menuItem);
+  let correctMenu = restaurant.menus[mealType];
+
+  if (!correctMenu.find((food) => food.name === menuItem.name)) {
+    correctMenu.push(menuItem);
+  }
 }
 
 module.exports = {
